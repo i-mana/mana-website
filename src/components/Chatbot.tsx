@@ -55,7 +55,7 @@ const Chatbot = () => {
     <>
       {/* Chat Window - appears to the left of avatar */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-[500px] w-96 h-[500px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl">)
+        <Card className="fixed bottom-6 right-[420px] w-[600px] h-[500px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl">)
           {/* Header */}
           <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -115,8 +115,8 @@ const Chatbot = () => {
       {/* Chat Button / Avatar - expands in place */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 shadow-2xl hover:scale-105 transition-all duration-300 z-50 overflow-hidden group ${
-          isOpen ? 'w-[450px] h-[500px] rounded-3xl border-0' : 'w-20 h-20 rounded-full border-4 border-white'
+        className={`fixed bottom-6 right-6 hover:scale-105 transition-all duration-300 z-50 overflow-hidden ${
+          isOpen ? 'w-[350px] h-[500px] rounded-3xl shadow-2xl' : 'w-20 h-20 rounded-full border-4 border-white shadow-2xl'
         }`}
         style={!isOpen ? {
           background: 'linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)))',
