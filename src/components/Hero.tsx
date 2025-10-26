@@ -2,13 +2,13 @@ import heroUnity from "@/assets/hero-unity.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(40 35% 92%), hsl(25 40% 88%), hsl(215 35% 85%))' }}>
       {/* Background with subtle pattern */}
       <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroUnity})`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         }}
