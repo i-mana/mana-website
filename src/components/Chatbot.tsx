@@ -55,10 +55,16 @@ const Chatbot = () => {
     <>
       {/* Chat Window - responsive positioning */}
       {isOpen && (
-        <Card className="fixed bottom-4 left-4 md:left-6 md:bottom-6 lg:right-[315px] lg:left-auto w-[calc(100vw-2rem)] md:w-[400px] lg:w-[500px] h-[70vh] md:h-[450px] lg:h-[500px] max-h-[600px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
+        <Card className="fixed bottom-4 left-4 md:left-auto md:right-[180px] md:bottom-6 lg:right-[315px] w-[calc(100vw-2rem)] md:w-[400px] lg:w-[500px] h-[70vh] md:h-[450px] lg:h-[500px] max-h-[600px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
           {/* Header */}
           <div className="bg-gradient-to-r from-background/90 via-primary/30 to-background/90 backdrop-blur-sm p-4 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center gap-3">
+              {/* Mobile character avatar in header */}
+              <img 
+                src={chatbotAvatar} 
+                alt="MANA" 
+                className="w-10 h-10 md:hidden object-contain"
+              />
               <div className="text-foreground">
                 <h3 className="font-bold">MANA Chat</h3>
                 <p className="text-xs opacity-70">Always here to help</p>
