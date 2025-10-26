@@ -161,11 +161,11 @@ All colors MUST be HSL.
   .card-framed::before {
     content: '';
     position: absolute;
-    inset: 4px;
+    inset: 8px;
     border: 1px solid hsl(var(--border));
-    border-radius: calc(var(--radius) - 2px);
+    border-radius: calc(var(--radius) - 4px);
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.6;
   }
   
   .card-framed::after {
@@ -174,14 +174,14 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: var(--radius);
     background: 
-      linear-gradient(90deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top left / 40px 2px no-repeat,
-      linear-gradient(0deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top left / 2px 40px no-repeat,
-      linear-gradient(90deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) top right / 40px 2px no-repeat,
-      linear-gradient(0deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top right / 2px 40px no-repeat,
-      linear-gradient(90deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) bottom left / 40px 2px no-repeat,
-      linear-gradient(0deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom left / 2px 40px no-repeat,
-      linear-gradient(90deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom right / 40px 2px no-repeat,
-      linear-gradient(0deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom right / 2px 40px no-repeat;
+      linear-gradient(90deg, hsl(var(--secondary)) 0%, transparent 100%) top left / 24px 3px no-repeat,
+      linear-gradient(0deg, hsl(var(--secondary)) 0%, transparent 100%) top left / 3px 24px no-repeat,
+      linear-gradient(90deg, transparent 0%, hsl(var(--secondary)) 100%) top right / 24px 3px no-repeat,
+      linear-gradient(0deg, hsl(var(--secondary)) 0%, transparent 100%) top right / 3px 24px no-repeat,
+      linear-gradient(90deg, hsl(var(--secondary)) 0%, transparent 100%) bottom left / 24px 3px no-repeat,
+      linear-gradient(0deg, transparent 0%, hsl(var(--secondary)) 100%) bottom left / 3px 24px no-repeat,
+      linear-gradient(90deg, transparent 0%, hsl(var(--secondary)) 100%) bottom right / 24px 3px no-repeat,
+      linear-gradient(0deg, transparent 0%, hsl(var(--secondary)) 100%) bottom right / 3px 24px no-repeat;
     pointer-events: none;
   }
   
