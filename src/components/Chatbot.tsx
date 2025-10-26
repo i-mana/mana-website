@@ -63,7 +63,7 @@ const Chatbot = () => {
               <img 
                 src={chatbotAvatar} 
                 alt="MANA" 
-                className="w-10 h-10 md:hidden object-contain"
+                className="w-14 h-14 md:hidden object-contain"
               />
               <div className="text-foreground">
                 <h3 className="font-bold">MANA Chat</h3>
@@ -169,7 +169,7 @@ const Chatbot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="hidden md:block fixed right-6 bottom-6 md:w-32 md:h-40 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
+          className="hidden md:block fixed right-6 bottom-6 md:w-48 md:h-60 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
           style={{ 
             background: 'none',
             backgroundColor: 'transparent',
