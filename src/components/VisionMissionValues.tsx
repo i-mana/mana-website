@@ -36,8 +36,9 @@ const VisionMissionValues = () => {
         {/* Vision and Mission Side by Side */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Vision */}
-          <Card className="p-8 md:p-10 shadow-card hover:shadow-soft transition-smooth gradient-card border-2 animate-fade-in">
-            <div className="space-y-6">
+          <Card className="p-8 md:p-10 shadow-card hover:shadow-soft transition-smooth border-2 border-secondary/20 animate-fade-in overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-accent/5" />
+            <div className="relative space-y-6">
               <div className="inline-flex items-center justify-center p-2 bg-secondary/10 rounded-full">
                 <Eye className="h-6 w-6 text-secondary" />
               </div>
@@ -53,8 +54,9 @@ const VisionMissionValues = () => {
           </Card>
 
           {/* Mission */}
-          <Card className="p-8 md:p-10 shadow-card hover:shadow-soft transition-smooth gradient-card border-2 animate-fade-in" style={{ animationDelay: '100ms' }}>
-            <div className="space-y-6">
+          <Card className="p-8 md:p-10 shadow-card hover:shadow-soft transition-smooth border-2 border-accent/20 animate-fade-in overflow-hidden relative" style={{ animationDelay: '100ms' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-secondary/5" />
+            <div className="relative space-y-6">
               <div className="inline-flex items-center justify-center p-2 bg-accent/10 rounded-full">
                 <Sparkles className="h-6 w-6 text-accent" />
               </div>
@@ -86,11 +88,12 @@ const VisionMissionValues = () => {
               return (
                 <Card 
                   key={index}
-                  className="group hover:shadow-soft transition-smooth border-2 hover:border-secondary/20 animate-fade-in"
+                  className="group hover:shadow-soft transition-smooth border-2 hover:border-accent/30 border-muted animate-fade-in overflow-hidden relative"
                   style={{ animationDelay: `${(index + 3) * 100}ms` }}
                 >
-                  <CardContent className="p-8 space-y-4">
-                    <div className="w-14 h-14 rounded-2xl gradient-accent flex items-center justify-center group-hover:scale-110 transition-smooth shadow-soft">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 opacity-50" />
+                  <CardContent className="relative p-8 space-y-4">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center group-hover:scale-110 transition-smooth shadow-soft">
                       <Icon className="h-7 w-7 text-secondary-foreground" />
                     </div>
                     <h3 className="text-xl font-bold">{value.title}</h3>
