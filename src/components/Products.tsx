@@ -51,10 +51,16 @@ const Products = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Icon Container */}
-                <div className="mb-6">
-                  <div className="w-14 h-14 rounded-2xl gradient-accent flex items-center justify-center group-hover:scale-110 transition-smooth shadow-soft">
-                    <Icon className="h-7 w-7 text-secondary-foreground" />
+                <div className="mb-6 relative">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:rotate-3">
+                    <Icon className="w-8 h-8 text-primary group-hover:text-primary/80 transition-colors" />
+                    {product.name === "CinemaSurvey" && (
+                      <span className="absolute bottom-1 text-[8px] font-bold text-primary/70 tracking-wider">
+                        SURVEY
+                      </span>
+                    )}
                   </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
                 </div>
 
                 {/* Content */}
