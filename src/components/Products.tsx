@@ -47,7 +47,7 @@ const Products = () => {
             return (
               <Card
                 key={product.name}
-                className={`group p-6 bg-gradient-to-br ${product.gradient} border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-fade-in cursor-pointer`}
+                className={`group p-6 gradient-card border-2 transition-all duration-500 hover:shadow-soft hover:-translate-y-2 animate-fade-in cursor-pointer`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Icon Container */}
