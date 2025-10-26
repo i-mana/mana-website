@@ -21,7 +21,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 px-4">
-        <div className="max-w-5xl mx-auto text-center animate-fade-in pt-20 md:pt-24">
+        <div className="max-w-5xl mx-auto text-center animate-fade-in pt-40 md:pt-48">
           {/* Main branding - positioned at top */}
           <div>
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight">
