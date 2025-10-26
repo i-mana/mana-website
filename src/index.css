@@ -152,4 +152,44 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
+  
+  /* Scroll flowing animations */
+  @keyframes scroll-float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0.5deg);
+    }
+  }
+  
+  @keyframes ribbon-sway {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  @keyframes ribbon-sway-reverse {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+  }
+  
+  .animate-scroll-float {
+    animation: scroll-float 4s ease-in-out infinite;
+  }
+  
+  .animate-ribbon-sway {
+    animation: ribbon-sway 2.5s ease-in-out infinite;
+  }
+  
+  .animate-ribbon-sway-reverse {
+    animation: ribbon-sway-reverse 2.5s ease-in-out infinite;
+  }
 }
