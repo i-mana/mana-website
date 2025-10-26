@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import VisionMissionValues from "@/components/VisionMissionValues";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <Hero />
       <VisionMissionValues />
       <Footer />
+      <Chatbot />
     </div>
   );
 };
