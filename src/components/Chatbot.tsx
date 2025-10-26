@@ -82,21 +82,25 @@ const Chatbot = () => {
                 className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
               >
                 {message.sender === "bot" && index === 0 && (
-                  <img 
-                    src={chatbotAvatar} 
-                    alt="MANA" 
-                    className="w-20 h-20 md:hidden object-contain mr-2 self-end"
-                  />
+                  <div className="md:hidden flex items-center justify-center w-full">
+                    <img 
+                      src={chatbotAvatar} 
+                      alt="MANA welcomes you" 
+                      className="w-32 h-32 object-contain"
+                    />
+                  </div>
                 )}
-                <div
-                  className={`max-w-[80%] p-3 rounded-lg ${
-                    message.sender === "user"
-                      ? "bg-primary text-white"
-                      : "bg-white/90 backdrop-blur-sm border border-primary/20"
-                  }`}
-                >
-                  <p className="text-sm">{message.text}</p>
-                </div>
+                {!(message.sender === "bot" && index === 0) || window.innerWidth >= 768 ? (
+                  <div
+                    className={`max-w-[80%] p-3 rounded-lg ${
+                      message.sender === "user"
+                        ? "bg-primary text-white"
+                        : "bg-white/90 backdrop-blur-sm border border-primary/20"
+                    } ${message.sender === "bot" && index === 0 ? "hidden md:block" : ""}`}
+                  >
+                    <p className="text-sm">{message.text}</p>
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
