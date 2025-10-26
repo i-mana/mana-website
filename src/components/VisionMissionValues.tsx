@@ -58,9 +58,9 @@ const VisionMissionValues = () => {
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Our Vision</h2>
                 <div className="flex items-center gap-2">
-                  <div className="h-px w-12 bg-gradient-to-r from-secondary to-accent" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-secondary to-accent" />
                   <div className="w-2 h-2 rotate-45 bg-accent" />
-                  <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
+                  <div className="h-px flex-1 bg-gradient-to-l from-secondary to-accent" />
                 </div>
                 <p className="text-lg md:text-xl font-semibold leading-relaxed text-foreground">
                   To join hands in India's growth and make technology the bridge that brings everyone along
@@ -77,9 +77,9 @@ const VisionMissionValues = () => {
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Our Mission</h2>
                 <div className="flex items-center gap-2">
-                  <div className="h-px w-12 bg-gradient-to-r from-accent to-primary" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-accent to-primary" />
                   <div className="w-2 h-2 rotate-45 bg-primary" />
-                  <div className="h-px flex-1 bg-gradient-to-r from-primary to-transparent" />
+                  <div className="h-px flex-1 bg-gradient-to-l from-accent to-primary" />
                 </div>
                 <p className="text-lg md:text-xl font-semibold leading-relaxed text-foreground">
                   To empower India's growth through inclusive and innovative technology for all
@@ -109,9 +109,9 @@ const VisionMissionValues = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Core Values</h2>
               <div className="flex items-center gap-2">
-                <div className="h-px w-12 bg-gradient-to-r from-primary to-accent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-primary to-accent" />
                 <div className="w-2 h-2 rotate-45 bg-accent" />
-                <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-l from-primary to-accent" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 The principles that guide everything we do
