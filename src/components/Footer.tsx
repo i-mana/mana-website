@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="absolute bottom-0 left-0 w-56 h-56 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-8 sm:mb-12">
           {/* About */}
           <div className="space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground drop-shadow-sm">
@@ -16,30 +16,8 @@ const Footer = () => {
             </h3>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-base sm:text-lg font-semibold text-foreground">Quick Links</h4>
-            <ul className="space-y-2 text-sm sm:text-base text-foreground/70">
-              <li>
-                <a href="#mission" className="hover:text-primary transition-smooth">
-                  Our Mission
-                </a>
-              </li>
-              <li>
-                <a href="#values" className="hover:text-primary transition-smooth">
-                  Core Values
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-primary transition-smooth">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact */}
-          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
+          <div className="space-y-4">
             <h4 className="text-base sm:text-lg font-semibold text-foreground">Get in Touch</h4>
             <div className="space-y-3 text-sm sm:text-base text-foreground/70">
               <div className="flex items-start gap-3">
