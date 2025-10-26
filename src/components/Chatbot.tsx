@@ -60,7 +60,7 @@ const Chatbot = () => {
           <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="text-white">
-                <h3 className="font-bold">MANA Assistant</h3>
+                <h3 className="font-bold">MANA Chat</h3>
                 <p className="text-xs opacity-90">Always here to help</p>
               </div>
             </div>
