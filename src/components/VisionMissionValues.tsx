@@ -31,12 +31,12 @@ const coreValues = [
 
 const VisionMissionValues = () => {
   return (
-    <section className="py-24 px-4 bg-muted/30">
-      <div className="container max-w-7xl mx-auto">
+    <section className="py-24 px-6 md:px-8 lg:px-12 bg-muted/30">
+      <div className="max-w-[1600px] mx-auto">
         {/* Vision, Mission, and Core Values in a single row on large screens */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 lg:gap-12">
           {/* Vision */}
-          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0">
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0 flex flex-col">
             {/* Ornate corner decorations */}
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-lg" />
             <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-secondary rounded-tr-lg" />
@@ -50,7 +50,7 @@ const VisionMissionValues = () => {
             {/* Border frame */}
             <div className="absolute inset-3 border-2 border-secondary/20 rounded-md pointer-events-none" />
             
-            <div className="relative p-6 md:p-8 space-y-4">
+            <div className="relative p-6 md:p-8 space-y-4 flex-1 flex flex-col">
               <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full border border-secondary/30">
                 <Eye className="h-5 w-5 text-secondary" />
               </div>
@@ -70,7 +70,7 @@ const VisionMissionValues = () => {
           </Card>
 
           {/* Mission */}
-          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0" style={{ animationDelay: '100ms' }}>
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0 flex flex-col" style={{ animationDelay: '100ms' }}>
             {/* Ornate corner decorations */}
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-lg" />
             <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-accent rounded-tr-lg" />
@@ -84,7 +84,7 @@ const VisionMissionValues = () => {
             {/* Border frame */}
             <div className="absolute inset-3 border-2 border-accent/20 rounded-md pointer-events-none" />
             
-            <div className="relative p-6 md:p-8 space-y-4">
+            <div className="relative p-6 md:p-8 space-y-4 flex-1 flex flex-col">
               <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full border border-accent/30">
                 <Sparkles className="h-5 w-5 text-accent" />
               </div>
@@ -101,7 +101,7 @@ const VisionMissionValues = () => {
           </Card>
 
           {/* Core Values Summary Card */}
-          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0 lg:col-span-1" style={{ animationDelay: '200ms' }}>
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0 flex flex-col" style={{ animationDelay: '200ms' }}>
             {/* Ornate corner decorations */}
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-lg" />
             <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-lg" />
