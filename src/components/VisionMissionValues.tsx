@@ -53,7 +53,7 @@ const VisionMissionValues = () => {
             <div className="relative p-6 md:p-8 space-y-8 flex-1 flex flex-col">
               {/* Vision Section */}
               <div className="space-y-4">
-                <div className="relative flex items-center justify-center p-3 border-2 border-secondary/30 rounded-full w-full">
+                <div className="relative flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 border-2 border-secondary/30 rounded-full w-full">
                   <Eye className="h-5 w-5 text-secondary" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Our Vision</h2>
@@ -72,7 +72,7 @@ const VisionMissionValues = () => {
 
               {/* Mission Section */}
               <div className="space-y-4">
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full border border-accent/30">
+                <div className="relative flex items-center justify-center p-3 bg-gradient-to-br from-accent/10 to-primary/10 border-2 border-accent/30 rounded-full w-full">
                   <Sparkles className="h-5 w-5 text-accent" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Our Mission</h2>
