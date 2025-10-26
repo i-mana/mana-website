@@ -35,59 +35,96 @@ const VisionMissionValues = () => {
       <div className="container max-w-7xl mx-auto">
         {/* Vision and Mission Side by Side */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
-          {/* Vision - Parchment Scroll Style */}
-          <Card className="relative shadow-2xl hover:shadow-3xl transition-smooth animate-fade-in overflow-visible group border-0 bg-transparent">
-            {/* Top scroll rod */}
-            <div className="absolute -top-4 left-0 right-0 h-4 bg-gradient-to-r from-secondary/60 via-secondary/80 to-secondary/60 rounded-full shadow-lg" />
-            <div className="absolute -top-4 left-4 right-4 h-4 bg-gradient-to-b from-secondary/40 to-secondary/70 rounded-full" />
+          {/* Vision - Realistic Flowing Parchment Scroll */}
+          <Card className="relative shadow-2xl hover:shadow-3xl transition-smooth animate-fade-in overflow-visible group border-0 bg-transparent px-4">
+            {/* Top scroll rod with realistic wood texture and curves */}
+            <div className="absolute -top-6 left-8 right-8 h-5">
+              {/* Rod shadow */}
+              <div className="absolute inset-0 top-1 bg-black/30 rounded-full blur-sm" />
+              {/* Wooden rod with grain */}
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-800 via-amber-700 to-amber-800 rounded-full shadow-lg" />
+              <div className="absolute inset-0 bg-gradient-to-b from-amber-600/50 via-transparent to-amber-900/50 rounded-full" />
+              {/* Rod ends (caps) */}
+              <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-yellow-700 to-amber-900 rounded-full shadow-md border-2 border-amber-800" />
+              <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-yellow-700 to-amber-900 rounded-full shadow-md border-2 border-amber-800" />
+            </div>
+            
+            {/* Top edge curl effect */}
+            <div className="absolute -top-2 left-12 right-12 h-8 bg-gradient-to-b from-amber-200 via-amber-100 to-transparent dark:from-amber-900 dark:via-amber-950 rounded-t-3xl shadow-inner" />
             
             {/* Bottom scroll rod */}
-            <div className="absolute -bottom-4 left-0 right-0 h-4 bg-gradient-to-r from-secondary/60 via-secondary/80 to-secondary/60 rounded-full shadow-lg" />
-            <div className="absolute -bottom-4 left-4 right-4 h-4 bg-gradient-to-b from-secondary/70 to-secondary/40 rounded-full" />
+            <div className="absolute -bottom-6 left-8 right-8 h-5">
+              <div className="absolute inset-0 -top-1 bg-black/30 rounded-full blur-sm" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-800 via-amber-700 to-amber-800 rounded-full shadow-lg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-amber-600/50 via-transparent to-amber-900/50 rounded-full" />
+              <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-yellow-700 to-amber-900 rounded-full shadow-md border-2 border-amber-800" />
+              <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-yellow-700 to-amber-900 rounded-full shadow-md border-2 border-amber-800" />
+            </div>
             
-            {/* Parchment body */}
-            <div className="relative bg-gradient-to-br from-amber-50/90 via-yellow-50/80 to-amber-100/90 dark:from-amber-950/30 dark:via-yellow-950/20 dark:to-amber-900/30 rounded-sm shadow-xl backdrop-blur-sm">
-              {/* Aged edges effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-800/20 via-transparent to-amber-800/20 rounded-sm" />
-              <div className="absolute inset-0 bg-gradient-to-b from-amber-900/10 via-transparent to-amber-900/10 rounded-sm" />
-              
-              {/* Ornate left border */}
-              <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-secondary/30 to-transparent">
-                <div className="absolute left-2 top-8 bottom-8 w-0.5 bg-secondary/40" />
-                <div className="absolute left-3 top-12 bottom-12 w-px bg-secondary/30" />
-                {/* Decorative elements */}
-                <div className="absolute left-2 top-1/4 w-2 h-2 border border-secondary/40 rotate-45" />
-                <div className="absolute left-2 top-1/2 w-2 h-2 border border-secondary/40 rotate-45" />
-                <div className="absolute left-2 top-3/4 w-2 h-2 border border-secondary/40 rotate-45" />
-              </div>
-              
-              {/* Ornate right border */}
-              <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-accent/30 to-transparent">
-                <div className="absolute right-2 top-8 bottom-8 w-0.5 bg-accent/40" />
-                <div className="absolute right-3 top-12 bottom-12 w-px bg-accent/30" />
-                {/* Decorative elements */}
-                <div className="absolute right-2 top-1/4 w-2 h-2 border border-accent/40 rotate-45" />
-                <div className="absolute right-2 top-1/2 w-2 h-2 border border-accent/40 rotate-45" />
-                <div className="absolute right-2 top-3/4 w-2 h-2 border border-accent/40 rotate-45" />
-              </div>
-              
-              {/* Content area */}
-              <div className="relative px-16 py-10 space-y-6">
-                <div className="inline-flex items-center justify-center p-3 bg-secondary/10 rounded-full border border-secondary/30">
-                  <Eye className="h-6 w-6 text-secondary" />
+            {/* Bottom edge curl effect */}
+            <div className="absolute -bottom-2 left-12 right-12 h-8 bg-gradient-to-t from-amber-200 via-amber-100 to-transparent dark:from-amber-900 dark:via-amber-950 rounded-b-3xl shadow-inner" />
+            
+            {/* Main parchment body with flowing edges */}
+            <div className="relative" style={{ 
+              clipPath: 'polygon(2% 0%, 98% 0%, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0% 98%, 0% 2%)'
+            }}>
+              {/* Parchment base with realistic texture */}
+              <div className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-amber-900/40 shadow-2xl">
+                {/* Paper texture overlay */}
+                <div className="absolute inset-0 opacity-30" style={{
+                  backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 92, 46, 0.03) 2px, rgba(139, 92, 46, 0.03) 4px)`
+                }} />
+                
+                {/* Age spots and stains */}
+                <div className="absolute top-10 right-20 w-16 h-16 bg-amber-800/5 dark:bg-amber-950/30 rounded-full blur-xl" />
+                <div className="absolute bottom-16 left-24 w-12 h-12 bg-amber-700/5 dark:bg-amber-900/30 rounded-full blur-lg" />
+                <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-amber-600/5 dark:bg-amber-800/30 rounded-full blur-md" />
+                
+                {/* Aged/burnt edges */}
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-amber-900/20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-amber-800/10 via-transparent to-amber-800/15" />
+                
+                {/* Ornate left border with flowing pattern */}
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-secondary/20 to-transparent">
+                  <svg className="absolute left-3 top-8 bottom-8 w-4" viewBox="0 0 20 400" preserveAspectRatio="none">
+                    <path d="M10 0 Q15 100 10 200 T10 400" stroke="hsl(var(--secondary))" strokeWidth="1" fill="none" opacity="0.4" />
+                    <path d="M12 50 Q14 100 12 150" stroke="hsl(var(--secondary))" strokeWidth="0.5" fill="none" opacity="0.3" />
+                  </svg>
+                  {/* Decorative flourishes */}
+                  <div className="absolute left-4 top-1/4 w-3 h-3 border-2 border-secondary/30 rotate-45 rounded-sm" />
+                  <div className="absolute left-5 top-1/2 w-2 h-2 bg-secondary/20 rotate-45" />
+                  <div className="absolute left-4 top-3/4 w-3 h-3 border-2 border-secondary/30 rotate-45 rounded-sm" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-serif">Our Vision</h2>
-                <div className="flex items-center gap-2">
-                  <div className="h-px w-12 bg-gradient-to-r from-secondary to-accent" />
-                  <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
-                  <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
+                
+                {/* Ornate right border with flowing pattern */}
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-accent/20 to-transparent">
+                  <svg className="absolute right-3 top-8 bottom-8 w-4" viewBox="0 0 20 400" preserveAspectRatio="none">
+                    <path d="M10 0 Q5 100 10 200 T10 400" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" opacity="0.4" />
+                    <path d="M8 50 Q6 100 8 150" stroke="hsl(var(--accent))" strokeWidth="0.5" fill="none" opacity="0.3" />
+                  </svg>
+                  <div className="absolute right-4 top-1/4 w-3 h-3 border-2 border-accent/30 rotate-45 rounded-sm" />
+                  <div className="absolute right-5 top-1/2 w-2 h-2 bg-accent/20 rotate-45" />
+                  <div className="absolute right-4 top-3/4 w-3 h-3 border-2 border-accent/30 rotate-45 rounded-sm" />
                 </div>
-                <p className="text-xl md:text-2xl font-semibold leading-relaxed text-amber-950 dark:text-amber-100 font-serif">
-                  To join hands in India's growth and make technology the bridge that brings everyone along
-                </p>
-                <p className="text-base text-amber-800 dark:text-amber-200 leading-relaxed italic">
-                  We see technology as a helping hand that lifts people up — blending India's spirit of unity with innovation that drives growth for all.
-                </p>
+                
+                {/* Content area */}
+                <div className="relative px-16 md:px-20 py-12 space-y-6">
+                  <div className="inline-flex items-center justify-center p-3 bg-amber-100/50 dark:bg-amber-900/30 rounded-full border-2 border-secondary/20 shadow-sm">
+                    <Eye className="h-6 w-6 text-secondary" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-amber-900 dark:text-amber-100 font-serif drop-shadow-sm">Our Vision</h2>
+                  <div className="flex items-center gap-2">
+                    <div className="h-px w-16 bg-gradient-to-r from-secondary/60 to-accent/60" />
+                    <div className="w-1.5 h-1.5 rotate-45 bg-accent/60" />
+                    <div className="h-px flex-1 bg-gradient-to-r from-accent/40 to-transparent" />
+                  </div>
+                  <p className="text-xl md:text-2xl font-semibold leading-relaxed text-amber-950 dark:text-amber-50 font-serif">
+                    To join hands in India's growth and make technology the bridge that brings everyone along
+                  </p>
+                  <p className="text-base text-amber-800 dark:text-amber-200 leading-relaxed italic font-serif">
+                    We see technology as a helping hand that lifts people up — blending India's spirit of unity with innovation that drives growth for all.
+                  </p>
+                </div>
               </div>
             </div>
           </Card>
