@@ -19,7 +19,7 @@ const Vision = () => {
               To join hands in India's growth and make technology the bridge that brings everyone along
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We envision an India where technology serves as the great equalizer, connecting every citizen to opportunities and progress. Our vision is to create a digital ecosystem that honors our rich heritage while embracing innovation, ensuring no one is left behind in our nation's journey forward.
+              We see technology as a helping hand that lifts people up — blending India's spirit of unity with innovation that drives growth for all.
             </p>
           </div>
         </Card>
