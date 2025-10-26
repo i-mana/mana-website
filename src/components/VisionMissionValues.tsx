@@ -112,12 +112,8 @@ const VisionMissionValues = () => {
             <div className="absolute inset-3 border-2 border-primary/20 rounded-md pointer-events-none" />
             
             <div className="relative p-6 md:p-8 space-y-4 h-full flex flex-col">
-              <div className="relative flex items-center justify-center p-3 border-2 border-primary/30 rounded-full">
-                <div className="absolute left-3 right-1/2 h-px bg-gradient-to-r from-primary/30 to-transparent mr-16" />
-                <div className="relative z-10 inline-flex items-center justify-center p-3 bg-background rounded-full">
-                  <Heart className="h-5 w-5 text-primary" />
-                </div>
-                <div className="absolute left-1/2 right-3 h-px bg-gradient-to-l from-primary/30 to-transparent ml-16" />
+              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/30">
+                <Heart className="h-5 w-5 text-primary" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Core Values</h2>
               <div className="flex items-center gap-2">
