@@ -8,11 +8,13 @@ const Hero = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroUnity})`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         }}
-      />
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/60 to-background/70" />
+      </div>
 
       {/* Subtle animated gradient orbs */}
       <div className="absolute top-1/3 right-1/3 w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
