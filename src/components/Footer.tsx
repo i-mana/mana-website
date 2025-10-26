@@ -2,23 +2,27 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/50 text-foreground py-16 px-4 border-t border-border">
-      <div className="container max-w-6xl mx-auto">
+    <footer className="relative py-16 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(40 35% 92%), hsl(25 40% 88%), hsl(215 35% 85%))' }}>
+      {/* Subtle decorative elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-56 h-56 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="container max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* About */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-hero bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold text-primary drop-shadow-sm">
               MANA
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-foreground/70 leading-relaxed">
               MANA
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-2 text-muted-foreground">
+            <h4 className="text-lg font-semibold text-foreground">Quick Links</h4>
+            <ul className="space-y-2 text-foreground/70">
               <li>
                 <a href="#mission" className="hover:text-primary transition-smooth">
                   Our Mission
@@ -39,8 +43,8 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Get in Touch</h4>
-            <div className="space-y-3 text-muted-foreground">
+            <h4 className="text-lg font-semibold text-foreground">Get in Touch</h4>
+            <div className="space-y-3 text-foreground/70">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-1 flex-shrink-0" />
                 <span>India</span>
@@ -60,7 +64,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border text-center text-muted-foreground">
+        <div className="pt-8 border-t border-foreground/10 text-center text-foreground/60">
           <p>&copy; {new Date().getFullYear()} MANA. All rights reserved.</p>
           <p className="mt-2 text-sm">
             Building India's digital future, together.
