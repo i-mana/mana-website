@@ -53,9 +53,9 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Chat Window - appears to the left of avatar */}
+      {/* Chat Window - responsive positioning */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-[315px] w-[500px] h-[500px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
+        <Card className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:right-[315px] w-[calc(100vw-2rem)] md:w-[450px] lg:w-[500px] h-[70vh] md:h-[500px] max-h-[600px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
           {/* Header */}
           <div className="bg-gradient-to-r from-background/90 via-primary/30 to-background/90 backdrop-blur-sm p-4 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center gap-3">
@@ -121,13 +121,13 @@ const Chatbot = () => {
         </Card>
       )}
 
-      {/* Chat Button / Avatar - expands in place */}
+      {/* Chat Button / Avatar - responsive sizing */}
       {!isOpen ? (
         <>
-          {/* Always visible info card */}
+          {/* Always visible info card - hidden on mobile when space is tight */}
           <Card 
             onClick={() => setIsOpen(true)}
-            className="fixed right-6 bottom-36 w-auto max-w-[160px] px-2 py-1.5 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in cursor-pointer hover:scale-105 transition-all duration-300"
+            className="fixed right-4 bottom-28 md:right-6 md:bottom-36 w-auto max-w-[140px] md:max-w-[160px] px-2 py-1.5 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in cursor-pointer hover:scale-105 transition-all duration-300"
           >
             <p className="text-xs font-bold text-foreground text-center">
               MANA Chat
@@ -139,7 +139,7 @@ const Chatbot = () => {
           
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="fixed right-6 bottom-6 w-28 h-28 hover:scale-105 transition-all duration-300 z-50"
+            className="fixed right-4 bottom-4 md:right-6 md:bottom-6 w-20 h-20 md:w-28 md:h-28 hover:scale-105 transition-all duration-300 z-50"
             style={{ 
               background: 'none',
               backgroundColor: 'transparent',
@@ -163,7 +163,7 @@ const Chatbot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed right-6 bottom-6 w-[300px] h-[400px] hover:scale-105 transition-all duration-300 z-50"
+          className="fixed right-4 bottom-4 md:right-6 md:bottom-6 w-32 h-40 md:w-56 md:h-72 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
           style={{ 
             background: 'none',
             backgroundColor: 'transparent',
