@@ -53,8 +53,12 @@ const VisionMissionValues = () => {
             <div className="relative p-6 md:p-8 space-y-8 flex-1 flex flex-col">
               {/* Vision Section */}
               <div className="space-y-4">
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full border border-secondary/30">
-                  <Eye className="h-5 w-5 text-secondary" />
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-secondary" />
+                  <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full border border-secondary/30">
+                    <Eye className="h-5 w-5 text-secondary" />
+                  </div>
+                  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-secondary" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Our Vision</h2>
                 <div className="flex items-center gap-2">
