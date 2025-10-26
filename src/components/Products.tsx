@@ -1,17 +1,17 @@
 import { Card } from "@/components/ui/card";
-import { Film, Brain, TrendingUp } from "lucide-react";
+import { Clapperboard, LineChart, TrendingUp } from "lucide-react";
 
 const products = [
   {
     name: "CinemaSurvey",
     description: "Revolutionary cinema feedback platform transforming audience insights into actionable data for the entertainment industry.",
-    icon: Film,
+    icon: Clapperboard,
     gradient: "from-primary/20 via-accent/10 to-background",
   },
   {
     name: "ChanakyAI",
     description: "Intelligent AI-powered assistant bringing ancient wisdom and modern technology together for strategic decision-making.",
-    icon: Brain,
+    icon: LineChart,
     gradient: "from-accent/20 via-primary/10 to-background",
   },
   {
