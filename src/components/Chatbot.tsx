@@ -53,66 +53,87 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Chat Window */}
+      {/* Overlay Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-24 right-6 w-96 h-[500px] shadow-2xl border-2 border-primary/20 z-50 flex flex-col animate-scale-in overflow-hidden">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
-                <img src={chatbotAvatar} alt="MANA Assistant" className="w-full h-full object-cover" />
-              </div>
-              <div className="text-white">
-                <h3 className="font-bold">MANA Assistant</h3>
-                <p className="text-xs opacity-90">Always here to help</p>
-              </div>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in">
+          {/* Backdrop with blur */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-md"
+            onClick={() => setIsOpen(false)}
+          />
+          
+          {/* Content Container */}
+          <div className="relative z-10 flex items-center gap-8 max-w-6xl w-full">
+            {/* Large Avatar */}
+            <div className="hidden lg:block w-96 h-[600px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-sm animate-scale-in">
+              <img 
+                src={chatbotAvatar} 
+                alt="MANA Assistant" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-white/20"
-            >
-              <X className="h-5 w-5" />
-            </Button>
-          </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-muted/30">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[80%] p-3 rounded-lg ${
-                    message.sender === "user"
-                      ? "bg-primary text-white"
-                      : "bg-background border border-primary/20"
-                  }`}
+            {/* Chat Window with Glassmorphism */}
+            <Card className="w-full lg:w-[500px] h-[600px] shadow-2xl border-2 border-white/20 flex flex-col overflow-hidden animate-scale-in bg-white/10 backdrop-blur-xl">
+              {/* Header */}
+              <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden lg:hidden">
+                    <img src={chatbotAvatar} alt="MANA Assistant" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="text-white">
+                    <h3 className="font-bold">MANA Assistant</h3>
+                    <p className="text-xs opacity-90">Always here to help</p>
+                  </div>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:bg-white/20"
                 >
-                  <p className="text-sm">{message.text}</p>
+                  <X className="h-5 w-5" />
+                </Button>
+              </div>
+
+              {/* Messages */}
+              <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/80 backdrop-blur-sm">
+                {messages.map((message) => (
+                  <div
+                    key={message.id}
+                    className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[80%] p-3 rounded-lg ${
+                        message.sender === "user"
+                          ? "bg-primary text-white"
+                          : "bg-white/90 backdrop-blur-sm border border-primary/20"
+                      }`}
+                    >
+                      <p className="text-sm">{message.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Input */}
+              <div className="p-4 border-t border-white/20 bg-white/90 backdrop-blur-sm">
+                <div className="flex gap-2">
+                  <Input
+                    placeholder="Type your message..."
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="flex-1 bg-white"
+                  />
+                  <Button onClick={handleSend} size="icon" className="bg-gradient-to-r from-secondary to-accent">
+                    <Send className="h-4 w-4" />
+                  </Button>
                 </div>
               </div>
-            ))}
+            </Card>
           </div>
-
-          {/* Input */}
-          <div className="p-4 border-t border-primary/10 bg-background">
-            <div className="flex gap-2">
-              <Input
-                placeholder="Type your message..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                className="flex-1"
-              />
-              <Button onClick={handleSend} size="icon" className="bg-gradient-to-r from-secondary to-accent">
-                <Send className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </Card>
+        </div>
       )}
 
       {/* Chat Button */}
@@ -134,9 +155,6 @@ const Chatbot = () => {
             <MessageCircle className="h-8 w-8 text-white" />
           </div>
         )}
-        
-        {/* Pulse effect */}
-        <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
       </button>
     </>
   );
