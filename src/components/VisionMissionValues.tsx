@@ -101,7 +101,7 @@ const VisionMissionValues = () => {
           </Card>
 
           {/* Core Values Summary Card */}
-          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0" style={{ animationDelay: '200ms' }}>
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0 lg:col-span-1" style={{ animationDelay: '200ms' }}>
             {/* Ornate corner decorations */}
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-lg" />
             <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-lg" />
@@ -115,7 +115,7 @@ const VisionMissionValues = () => {
             {/* Border frame */}
             <div className="absolute inset-3 border-2 border-primary/20 rounded-md pointer-events-none" />
             
-            <div className="relative p-6 md:p-8 space-y-4">
+            <div className="relative p-6 md:p-8 space-y-4 h-full flex flex-col">
               <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/30">
                 <Heart className="h-5 w-5 text-primary" />
               </div>
@@ -125,16 +125,21 @@ const VisionMissionValues = () => {
                 <div className="w-2 h-2 rotate-45 bg-accent" />
                 <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
               </div>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 The principles that guide everything we do
               </p>
-              <div className="space-y-2 pt-2">
-                {coreValues.slice(0, 5).map((value, index) => {
+              <div className="space-y-4 pt-2 flex-1 overflow-y-auto max-h-[400px] pr-2">
+                {coreValues.map((value, index) => {
                   const Icon = value.icon;
                   return (
-                    <div key={index} className="flex items-center gap-2 text-sm">
-                      <Icon className="h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="font-medium text-foreground">{value.title}</span>
+                    <div key={index} className="space-y-1.5">
+                      <div className="flex items-start gap-2">
+                        <Icon className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="font-semibold text-sm text-foreground leading-tight">{value.title}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed pl-6">
+                        {value.description}
+                      </p>
                     </div>
                   );
                 })}
