@@ -24,11 +24,14 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center animate-fade-in pt-40 md:pt-48">
           {/* Main branding - positioned at top */}
           <div>
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight">
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight mb-8">
               <span className="text-foreground" style={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
                 MANA
               </span>
             </h1>
+            <p className="text-2xl md:text-3xl font-semibold text-foreground/90 leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+              Empowering People. Inspiring Progress. Building India Together.
+            </p>
           </div>
         </div>
       </div>

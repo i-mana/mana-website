@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Lightbulb, Shield, Handshake, Leaf } from "lucide-react";
+import { Users, Lightbulb, Shield, Handshake, Leaf, Heart } from "lucide-react";
 
 const values = [
   {
@@ -34,6 +34,9 @@ const CoreValues = () => {
     <section className="py-24 px-4 bg-muted/30">
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center justify-center p-2 bg-accent/10 rounded-full mb-4">
+            <Heart className="h-6 w-6 text-accent" />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Values</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The principles that guide everything we do
@@ -41,7 +44,7 @@ const CoreValues = () => {
           <div className="w-24 h-1 bg-accent mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
@@ -62,12 +65,6 @@ const CoreValues = () => {
               </Card>
             );
           })}
-        </div>
-
-        <div className="text-center animate-fade-in" style={{ animationDelay: '500ms' }}>
-          <p className="text-2xl font-semibold text-secondary">
-            Empowering People. Inspiring Progress. Building India Together.
-          </p>
         </div>
       </div>
     </section>
