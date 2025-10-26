@@ -163,7 +163,7 @@ const Chatbot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed right-4 bottom-4 md:right-6 md:bottom-6 w-32 h-40 md:w-56 md:h-72 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
+          className="hidden lg:block fixed right-6 bottom-6 w-[300px] h-[400px] hover:scale-105 transition-all duration-300 z-50"
           style={{ 
             background: 'none',
             backgroundColor: 'transparent',
