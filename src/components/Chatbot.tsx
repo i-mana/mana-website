@@ -104,7 +104,7 @@ const Chatbot = () => {
                 onKeyPress={handleKeyPress}
                 className="flex-1 bg-white"
               />
-              <Button onClick={handleSend} size="icon" className="bg-gradient-to-r from-secondary to-accent">
+              <Button onClick={handleSend} size="icon" className="bg-primary/20 hover:bg-primary/30 backdrop-blur-sm border border-primary/30">
                 <Send className="h-4 w-4" />
               </Button>
             </div>
