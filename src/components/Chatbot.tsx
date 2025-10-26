@@ -3,7 +3,7 @@ import { X, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import chatbotAvatar from "@/assets/chatbot-avatar-transparent.png";
+import chatbotAvatar from "@/assets/chatbot-namaste.png";
 
 interface Message {
   id: number;
