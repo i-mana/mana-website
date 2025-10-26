@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative py-16 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(40 35% 92%), hsl(25 40% 88%), hsl(215 35% 85%))' }}>
+    <footer className="relative py-8 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(40 35% 92%), hsl(25 40% 88%), hsl(215 35% 85%))' }}>
       {/* Subtle decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-56 h-56 bg-accent/5 rounded-full blur-3xl" />
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* About */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary drop-shadow-sm">
+            <h3 className="text-2xl font-bold text-foreground drop-shadow-sm">
               MANA
             </h3>
             <p className="text-foreground/70 leading-relaxed">
@@ -66,9 +66,6 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-foreground/10 text-center text-foreground/60">
           <p>&copy; {new Date().getFullYear()} MANA. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            Building India's digital future, together.
-          </p>
         </div>
       </div>
     </footer>
