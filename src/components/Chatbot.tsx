@@ -125,7 +125,10 @@ const Chatbot = () => {
       {!isOpen ? (
         <>
           {/* Always visible info card */}
-          <Card className="fixed right-6 bottom-28 w-auto max-w-[180px] px-3 py-2 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in">
+          <Card 
+            onClick={() => setIsOpen(true)}
+            className="fixed right-6 bottom-28 w-auto max-w-[180px] px-3 py-2 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in cursor-pointer hover:scale-105 transition-all duration-300"
+          >
             <p className="text-sm font-bold text-foreground text-center">
               MANA Chat
             </p>
