@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with subtle pattern */}
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -14,64 +13,49 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/97 via-background/95 to-background/97" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
 
       {/* Content */}
       <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          {/* Logo/Title */}
-          <div className="space-y-2">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
-              <span className="gradient-hero bg-clip-text text-transparent">
+        <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
+          {/* Main branding */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-4 animate-scale-in">
+              <Sparkles className="h-8 w-8 text-primary" />
+            </div>
+            
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight">
+              <span className="gradient-hero bg-clip-text text-transparent drop-shadow-sm">
                 MANA
               </span>
             </h1>
-            <p className="text-xl md:text-2xl font-medium text-muted-foreground">
-              Making Apps for Nation's Advancements
-            </p>
           </div>
 
-          {/* Vision */}
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-              To join hands in India's growth and make technology the bridge that brings everyone along
-            </h2>
-          </div>
+          {/* Tagline */}
+          <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+            Building India's Digital Future
+          </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 shadow-soft hover:shadow-lg transition-smooth group"
-            >
-              Our Mission
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 border-2 hover:bg-muted transition-smooth"
-            >
-              Learn More
-            </Button>
-          </div>
-
-          {/* Stats or Tagline */}
-          <div className="pt-12">
-            <p className="text-lg text-muted-foreground font-medium">
+          {/* Core tagline */}
+          <div className="pt-8">
+            <p className="text-xl md:text-2xl font-medium text-primary">
               Empowering People. Inspiring Progress. Building India Together.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-3 bg-primary rounded-full" />
+        </div>
+      </div>
     </section>
   );
 };

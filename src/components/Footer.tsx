@@ -11,7 +11,7 @@ const Footer = () => {
               MANA
             </h3>
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Making Apps for Nation's Advancements. Empowering India's growth through inclusive and innovative technology.
+              Empowering India's growth through inclusive and innovative technology for all.
             </p>
           </div>
 
