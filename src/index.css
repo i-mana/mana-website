@@ -153,6 +153,38 @@ All colors MUST be HSL.
     transition: var(--transition-smooth);
   }
   
+  /* Card with decorative corners */
+  .card-framed {
+    position: relative;
+  }
+  
+  .card-framed::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) - 2px);
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .card-framed::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    background: 
+      linear-gradient(90deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top left / 40px 2px no-repeat,
+      linear-gradient(0deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top left / 2px 40px no-repeat,
+      linear-gradient(90deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) top right / 40px 2px no-repeat,
+      linear-gradient(0deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) top right / 2px 40px no-repeat,
+      linear-gradient(90deg, hsl(var(--primary) / 0.3) 0%, transparent 20%) bottom left / 40px 2px no-repeat,
+      linear-gradient(0deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom left / 2px 40px no-repeat,
+      linear-gradient(90deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom right / 40px 2px no-repeat,
+      linear-gradient(0deg, transparent 80%, hsl(var(--primary) / 0.3) 100%) bottom right / 2px 40px no-repeat;
+    pointer-events: none;
+  }
+  
   /* Scroll flowing animations */
   @keyframes scroll-float {
     0%, 100% {
