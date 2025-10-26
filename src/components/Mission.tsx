@@ -18,9 +18,6 @@ const Mission = () => {
             <p className="text-2xl md:text-3xl font-semibold leading-relaxed text-foreground">
               To empower India's growth through inclusive and innovative technology for all
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We believe that technology should be accessible to every Indian, bridging gaps and creating opportunities that drive our nation forward. Through innovation with purpose, we're building solutions that make a real difference in people's lives.
-            </p>
           </div>
         </Card>
       </div>

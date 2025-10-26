@@ -1,4 +1,4 @@
-import heroMana from "@/assets/hero-mana.jpg";
+import heroUnity from "@/assets/hero-unity.jpg";
 import { Sparkles } from "lucide-react";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${heroMana})`,
+          backgroundImage: `url(${heroUnity})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -29,8 +29,8 @@ const Hero = () => {
               <Sparkles className="h-8 w-8 text-primary" />
             </div>
             
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight drop-shadow-lg">
-              <span className="text-foreground">
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight">
+              <span className="text-foreground" style={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
                 MANA
               </span>
             </h1>
