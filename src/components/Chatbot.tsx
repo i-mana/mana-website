@@ -127,19 +127,19 @@ const Chatbot = () => {
           {/* Always visible info card */}
           <Card 
             onClick={() => setIsOpen(true)}
-            className="fixed right-6 bottom-28 w-auto max-w-[180px] px-3 py-2 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in cursor-pointer hover:scale-105 transition-all duration-300"
+            className="fixed right-6 bottom-36 w-auto max-w-[160px] px-2 py-1.5 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl z-50 animate-fade-in cursor-pointer hover:scale-105 transition-all duration-300"
           >
-            <p className="text-sm font-bold text-foreground text-center">
+            <p className="text-xs font-bold text-foreground text-center">
               MANA Chat
             </p>
-            <p className="text-xs text-foreground/70 text-center">
+            <p className="text-[10px] text-foreground/70 text-center">
               Click To Expand And Ask
             </p>
           </Card>
           
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="fixed right-6 bottom-6 w-20 h-20 hover:scale-105 transition-all duration-300 z-50"
+            className="fixed right-6 bottom-6 w-28 h-28 hover:scale-105 transition-all duration-300 z-50"
             style={{ 
               background: 'none',
               backgroundColor: 'transparent',
