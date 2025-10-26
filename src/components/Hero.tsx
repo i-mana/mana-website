@@ -11,6 +11,7 @@ const Hero = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
+          filter: 'brightness(1.2)',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/60 to-background/70" />
