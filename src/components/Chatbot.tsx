@@ -3,6 +3,11 @@ import { X, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import chatbotAvatar from "@/assets/mana-mascot.png";
 
 interface Message {
@@ -122,32 +127,66 @@ const Chatbot = () => {
       )}
 
       {/* Chat Button / Avatar - expands in place */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`fixed right-6 hover:scale-105 transition-all duration-300 z-50 ${
-          isOpen ? 'bottom-6 w-[300px] h-[400px]' : 'bottom-6 w-20 h-20'
-        }`}
-        style={{ 
-          background: 'none',
-          backgroundColor: 'transparent',
-          border: 'none',
-          padding: 0,
-          outline: 'none'
-        }}
-      >
-        <img 
-          src={chatbotAvatar} 
-          alt="Chat with us" 
-          className={`w-full h-full transition-all duration-300 ${
-            isOpen ? 'object-contain object-bottom drop-shadow-2xl' : 'object-contain drop-shadow-lg'
-          }`}
+      {!isOpen ? (
+        <HoverCard openDelay={200}>
+          <HoverCardTrigger asChild>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="fixed right-6 bottom-6 w-20 h-20 hover:scale-105 transition-all duration-300 z-50"
+              style={{ 
+                background: 'none',
+                backgroundColor: 'transparent',
+                border: 'none',
+                padding: 0,
+                outline: 'none'
+              }}
+            >
+              <img 
+                src={chatbotAvatar} 
+                alt="Chat with us" 
+                className="w-full h-full object-contain drop-shadow-lg"
+                style={{ 
+                  background: 'none',
+                  backgroundColor: 'transparent',
+                  imageRendering: 'auto'
+                }}
+              />
+            </button>
+          </HoverCardTrigger>
+          <HoverCardContent 
+            side="top" 
+            align="end"
+            className="w-auto px-4 py-2 bg-gradient-to-r from-background/95 via-primary/20 to-background/95 backdrop-blur-xl border border-primary/30 shadow-xl"
+          >
+            <p className="text-sm font-medium text-foreground">
+              MANA Chat - Click To Expand And Ask
+            </p>
+          </HoverCardContent>
+        </HoverCard>
+      ) : (
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="fixed right-6 bottom-6 w-[300px] h-[400px] hover:scale-105 transition-all duration-300 z-50"
           style={{ 
             background: 'none',
             backgroundColor: 'transparent',
-            imageRendering: 'auto'
+            border: 'none',
+            padding: 0,
+            outline: 'none'
           }}
-        />
-      </button>
+        >
+          <img 
+            src={chatbotAvatar} 
+            alt="Chat with us" 
+            className="w-full h-full object-contain object-bottom drop-shadow-2xl transition-all duration-300"
+            style={{ 
+              background: 'none',
+              backgroundColor: 'transparent',
+              imageRendering: 'auto'
+            }}
+          />
+        </button>
+      )}
     </>
   );
 };
