@@ -115,10 +115,16 @@ const Chatbot = () => {
       {/* Chat Button / Avatar - expands in place */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed right-6 hover:scale-105 transition-all duration-300 z-50 bg-transparent ${
+        className={`fixed right-6 hover:scale-105 transition-all duration-300 z-50 ${
           isOpen ? 'bottom-6 w-[300px] h-[400px]' : 'bottom-6 w-20 h-20'
         }`}
-        style={{ background: 'none', border: 'none', padding: 0 }}
+        style={{ 
+          background: 'none',
+          backgroundColor: 'transparent',
+          border: 'none',
+          padding: 0,
+          outline: 'none'
+        }}
       >
         <img 
           src={chatbotAvatar} 
@@ -126,7 +132,11 @@ const Chatbot = () => {
           className={`w-full h-full transition-all duration-300 ${
             isOpen ? 'object-contain object-bottom drop-shadow-2xl' : 'object-contain drop-shadow-lg'
           }`}
-          style={{ background: 'transparent' }}
+          style={{ 
+            background: 'none',
+            backgroundColor: 'transparent',
+            imageRendering: 'auto'
+          }}
         />
       </button>
     </>
