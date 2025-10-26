@@ -36,17 +36,29 @@ const VisionMissionValues = () => {
         {/* Vision and Mission Side by Side */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Vision */}
-          <Card className="p-1 shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-hidden relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary via-accent to-primary opacity-20" />
-            <div className="absolute inset-[2px] bg-background rounded-lg" />
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0">
+            {/* Ornate corner decorations */}
+            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-lg" />
+            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-secondary rounded-tr-lg" />
+            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-4 border-l-4 border-secondary rounded-bl-lg" />
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-lg" />
+            
+            {/* Parchment background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-accent/5 rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent rounded-lg" />
+            
+            {/* Border frame */}
+            <div className="absolute inset-3 border-2 border-secondary/20 rounded-md pointer-events-none" />
+            
             <div className="relative p-8 md:p-10 space-y-6">
-              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full border-2 border-secondary/30">
+              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full border border-secondary/30">
                 <Eye className="h-6 w-6 text-secondary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Our Vision</h2>
-              <div className="flex gap-1">
-                <div className="w-16 h-1 bg-gradient-to-r from-secondary to-accent rounded-full" />
-                <div className="w-4 h-1 bg-accent/50 rounded-full" />
+              <div className="flex items-center gap-2">
+                <div className="h-px w-12 bg-gradient-to-r from-secondary to-accent" />
+                <div className="w-2 h-2 rotate-45 bg-accent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
               </div>
               <p className="text-xl md:text-2xl font-semibold leading-relaxed text-foreground">
                 To join hands in India's growth and make technology the bridge that brings everyone along
@@ -58,17 +70,29 @@ const VisionMissionValues = () => {
           </Card>
 
           {/* Mission */}
-          <Card className="p-1 shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-hidden relative group" style={{ animationDelay: '100ms' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-secondary opacity-20" />
-            <div className="absolute inset-[2px] bg-background rounded-lg" />
+          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0" style={{ animationDelay: '100ms' }}>
+            {/* Ornate corner decorations */}
+            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-lg" />
+            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-accent rounded-tr-lg" />
+            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-4 border-l-4 border-accent rounded-bl-lg" />
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-4 border-r-4 border-accent rounded-br-lg" />
+            
+            {/* Parchment background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-primary/5 rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent rounded-lg" />
+            
+            {/* Border frame */}
+            <div className="absolute inset-3 border-2 border-accent/20 rounded-md pointer-events-none" />
+            
             <div className="relative p-8 md:p-10 space-y-6">
-              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full border-2 border-accent/30">
+              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full border border-accent/30">
                 <Sparkles className="h-6 w-6 text-accent" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Our Mission</h2>
-              <div className="flex gap-1">
-                <div className="w-16 h-1 bg-gradient-to-r from-accent to-primary rounded-full" />
-                <div className="w-4 h-1 bg-primary/50 rounded-full" />
+              <div className="flex items-center gap-2">
+                <div className="h-px w-12 bg-gradient-to-r from-accent to-primary" />
+                <div className="w-2 h-2 rotate-45 bg-primary" />
+                <div className="h-px flex-1 bg-gradient-to-r from-primary to-transparent" />
               </div>
               <p className="text-xl md:text-2xl font-semibold leading-relaxed text-foreground">
                 To empower India's growth through inclusive and innovative technology for all
@@ -90,22 +114,38 @@ const VisionMissionValues = () => {
             <div className="w-24 h-1 bg-accent mx-auto rounded-full mt-6" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreValues.map((value, index) => {
               const Icon = value.icon;
               return (
                 <Card 
                   key={index}
-                  className="p-1 group hover:shadow-xl transition-smooth animate-fade-in overflow-hidden relative"
+                  className="relative group hover:shadow-xl transition-smooth animate-fade-in overflow-visible border-0"
                   style={{ animationDelay: `${(index + 3) * 100}ms` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent opacity-10 group-hover:opacity-20 transition-smooth" />
-                  <div className="absolute inset-[1px] bg-background rounded-lg" />
+                  {/* Corner decorations */}
+                  <div className="absolute -top-0.5 -left-0.5 w-6 h-6 border-t-2 border-l-2 border-secondary/50 rounded-tl" />
+                  <div className="absolute -top-0.5 -right-0.5 w-6 h-6 border-t-2 border-r-2 border-accent/50 rounded-tr" />
+                  <div className="absolute -bottom-0.5 -left-0.5 w-6 h-6 border-b-2 border-l-2 border-accent/50 rounded-bl" />
+                  <div className="absolute -bottom-0.5 -right-0.5 w-6 h-6 border-b-2 border-r-2 border-secondary/50 rounded-br" />
+                  
+                  {/* Parchment background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-background to-accent/3 rounded-lg" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/3 to-transparent rounded-lg" />
+                  
+                  {/* Inner border */}
+                  <div className="absolute inset-2 border border-muted/30 rounded-md pointer-events-none" />
+                  
                   <CardContent className="relative p-8 space-y-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-secondary via-accent to-primary p-[2px] group-hover:scale-110 transition-smooth shadow-lg">
-                      <div className="w-full h-full rounded-xl bg-background flex items-center justify-center">
+                    <div className="relative w-14 h-14 group-hover:scale-110 transition-smooth">
+                      <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-lg opacity-20" />
+                      <div className="relative w-full h-full border-2 border-secondary/30 rounded-lg bg-background/50 backdrop-blur-sm flex items-center justify-center">
                         <Icon className="h-7 w-7 text-secondary" />
                       </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="h-px w-8 bg-gradient-to-r from-secondary to-accent" />
+                      <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
                     </div>
                     <h3 className="text-xl font-bold">{value.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
