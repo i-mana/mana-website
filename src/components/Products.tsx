@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Clapperboard, LineChart, TrendingUp } from "lucide-react";
+import { Clapperboard, Coins, TrendingUp } from "lucide-react";
 
 const products = [
   {
@@ -11,7 +11,7 @@ const products = [
   {
     name: "ChanakyAI",
     description: "Intelligent AI-powered assistant bringing ancient wisdom and modern technology together for strategic decision-making.",
-    icon: LineChart,
+    icon: Coins,
     gradient: "from-accent/20 via-primary/10 to-background",
   },
   {
