@@ -135,52 +135,6 @@ const VisionMissionValues = () => {
             </div>
           </Card>
         </div>
-
-        {/* Detailed Core Values Section Below */}
-        <div className="mt-16 animate-fade-in" style={{ animationDelay: '300ms' }}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreValues.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <Card 
-                  key={index}
-                  className="relative group hover:shadow-xl transition-smooth animate-fade-in overflow-visible border-0"
-                  style={{ animationDelay: `${(index + 4) * 100}ms` }}
-                >
-                  {/* Corner decorations */}
-                  <div className="absolute -top-0.5 -left-0.5 w-6 h-6 border-t-2 border-l-2 border-secondary/50 rounded-tl" />
-                  <div className="absolute -top-0.5 -right-0.5 w-6 h-6 border-t-2 border-r-2 border-accent/50 rounded-tr" />
-                  <div className="absolute -bottom-0.5 -left-0.5 w-6 h-6 border-b-2 border-l-2 border-accent/50 rounded-bl" />
-                  <div className="absolute -bottom-0.5 -right-0.5 w-6 h-6 border-b-2 border-r-2 border-secondary/50 rounded-br" />
-                  
-                  {/* Parchment background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-background to-accent/3 rounded-lg" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/3 to-transparent rounded-lg" />
-                  
-                  {/* Inner border */}
-                  <div className="absolute inset-2 border border-muted/30 rounded-md pointer-events-none" />
-                  
-                  <CardContent className="relative p-6 space-y-3">
-                    <div className="relative w-12 h-12 group-hover:scale-110 transition-smooth">
-                      <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-lg opacity-20" />
-                      <div className="relative w-full h-full border-2 border-secondary/30 rounded-lg bg-background/50 backdrop-blur-sm flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-secondary" />
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="h-px w-8 bg-gradient-to-r from-secondary to-accent" />
-                      <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );
