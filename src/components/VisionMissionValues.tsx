@@ -35,37 +35,60 @@ const VisionMissionValues = () => {
       <div className="container max-w-7xl mx-auto">
         {/* Vision and Mission Side by Side */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
-          {/* Vision */}
-          <Card className="relative shadow-lg hover:shadow-xl transition-smooth animate-fade-in overflow-visible group border-0">
-            {/* Ornate corner decorations */}
-            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-lg" />
-            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-secondary rounded-tr-lg" />
-            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-4 border-l-4 border-secondary rounded-bl-lg" />
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-lg" />
+          {/* Vision - Parchment Scroll Style */}
+          <Card className="relative shadow-2xl hover:shadow-3xl transition-smooth animate-fade-in overflow-visible group border-0 bg-transparent">
+            {/* Top scroll rod */}
+            <div className="absolute -top-4 left-0 right-0 h-4 bg-gradient-to-r from-secondary/60 via-secondary/80 to-secondary/60 rounded-full shadow-lg" />
+            <div className="absolute -top-4 left-4 right-4 h-4 bg-gradient-to-b from-secondary/40 to-secondary/70 rounded-full" />
             
-            {/* Parchment background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-background to-accent/5 rounded-lg" />
-            <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent rounded-lg" />
+            {/* Bottom scroll rod */}
+            <div className="absolute -bottom-4 left-0 right-0 h-4 bg-gradient-to-r from-secondary/60 via-secondary/80 to-secondary/60 rounded-full shadow-lg" />
+            <div className="absolute -bottom-4 left-4 right-4 h-4 bg-gradient-to-b from-secondary/70 to-secondary/40 rounded-full" />
             
-            {/* Border frame */}
-            <div className="absolute inset-3 border-2 border-secondary/20 rounded-md pointer-events-none" />
-            
-            <div className="relative p-8 md:p-10 space-y-6">
-              <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-secondary/10 to-accent/10 rounded-full border border-secondary/30">
-                <Eye className="h-6 w-6 text-secondary" />
+            {/* Parchment body */}
+            <div className="relative bg-gradient-to-br from-amber-50/90 via-yellow-50/80 to-amber-100/90 dark:from-amber-950/30 dark:via-yellow-950/20 dark:to-amber-900/30 rounded-sm shadow-xl backdrop-blur-sm">
+              {/* Aged edges effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-800/20 via-transparent to-amber-800/20 rounded-sm" />
+              <div className="absolute inset-0 bg-gradient-to-b from-amber-900/10 via-transparent to-amber-900/10 rounded-sm" />
+              
+              {/* Ornate left border */}
+              <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-secondary/30 to-transparent">
+                <div className="absolute left-2 top-8 bottom-8 w-0.5 bg-secondary/40" />
+                <div className="absolute left-3 top-12 bottom-12 w-px bg-secondary/30" />
+                {/* Decorative elements */}
+                <div className="absolute left-2 top-1/4 w-2 h-2 border border-secondary/40 rotate-45" />
+                <div className="absolute left-2 top-1/2 w-2 h-2 border border-secondary/40 rotate-45" />
+                <div className="absolute left-2 top-3/4 w-2 h-2 border border-secondary/40 rotate-45" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Our Vision</h2>
-              <div className="flex items-center gap-2">
-                <div className="h-px w-12 bg-gradient-to-r from-secondary to-accent" />
-                <div className="w-2 h-2 rotate-45 bg-accent" />
-                <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
+              
+              {/* Ornate right border */}
+              <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-accent/30 to-transparent">
+                <div className="absolute right-2 top-8 bottom-8 w-0.5 bg-accent/40" />
+                <div className="absolute right-3 top-12 bottom-12 w-px bg-accent/30" />
+                {/* Decorative elements */}
+                <div className="absolute right-2 top-1/4 w-2 h-2 border border-accent/40 rotate-45" />
+                <div className="absolute right-2 top-1/2 w-2 h-2 border border-accent/40 rotate-45" />
+                <div className="absolute right-2 top-3/4 w-2 h-2 border border-accent/40 rotate-45" />
               </div>
-              <p className="text-xl md:text-2xl font-semibold leading-relaxed text-foreground">
-                To join hands in India's growth and make technology the bridge that brings everyone along
-              </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                We see technology as a helping hand that lifts people up — blending India's spirit of unity with innovation that drives growth for all.
-              </p>
+              
+              {/* Content area */}
+              <div className="relative px-16 py-10 space-y-6">
+                <div className="inline-flex items-center justify-center p-3 bg-secondary/10 rounded-full border border-secondary/30">
+                  <Eye className="h-6 w-6 text-secondary" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-serif">Our Vision</h2>
+                <div className="flex items-center gap-2">
+                  <div className="h-px w-12 bg-gradient-to-r from-secondary to-accent" />
+                  <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent" />
+                </div>
+                <p className="text-xl md:text-2xl font-semibold leading-relaxed text-amber-950 dark:text-amber-100 font-serif">
+                  To join hands in India's growth and make technology the bridge that brings everyone along
+                </p>
+                <p className="text-base text-amber-800 dark:text-amber-200 leading-relaxed italic">
+                  We see technology as a helping hand that lifts people up — blending India's spirit of unity with innovation that drives growth for all.
+                </p>
+              </div>
             </div>
           </Card>
 
