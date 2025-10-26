@@ -55,7 +55,7 @@ const Chatbot = () => {
     <>
       {/* Chat Window - responsive positioning */}
       {isOpen && (
-        <Card className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:right-[315px] w-[calc(100vw-2rem)] md:w-[450px] lg:w-[500px] h-[70vh] md:h-[500px] max-h-[600px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
+        <Card className="fixed bottom-4 left-4 md:left-6 md:bottom-6 lg:right-[315px] lg:left-auto w-[calc(100vw-2rem)] md:w-[400px] lg:w-[500px] h-[70vh] md:h-[450px] lg:h-[500px] max-h-[600px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
           {/* Header */}
           <div className="bg-gradient-to-r from-background/90 via-primary/30 to-background/90 backdrop-blur-sm p-4 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center gap-3">
@@ -163,7 +163,7 @@ const Chatbot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="hidden md:block fixed left-6 bottom-6 md:w-24 md:h-32 lg:left-auto lg:right-6 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
+          className="hidden md:block fixed right-6 bottom-6 md:w-32 md:h-40 lg:w-[300px] lg:h-[400px] hover:scale-105 transition-all duration-300 z-50"
           style={{ 
             background: 'none',
             backgroundColor: 'transparent',
