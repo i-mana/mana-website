@@ -57,18 +57,18 @@ const Chatbot = () => {
       {isOpen && (
         <Card className="fixed bottom-6 right-[315px] w-[500px] h-[500px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
           {/* Header */}
-          <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-background/90 via-primary/30 to-background/90 backdrop-blur-sm p-4 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center gap-3">
-              <div className="text-white">
+              <div className="text-foreground">
                 <h3 className="font-bold">MANA Chat</h3>
-                <p className="text-xs opacity-90">Always here to help</p>
+                <p className="text-xs opacity-70">Always here to help</p>
               </div>
             </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-white/20"
+              className="text-foreground/70 hover:text-foreground hover:bg-primary/10"
             >
               <X className="h-5 w-5" />
             </Button>
