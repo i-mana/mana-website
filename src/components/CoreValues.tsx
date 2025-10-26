@@ -38,7 +38,7 @@ const CoreValues = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The principles that guide everything we do
           </p>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1 bg-accent mx-auto rounded-full mt-6" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -47,7 +47,7 @@ const CoreValues = () => {
             return (
               <Card 
                 key={index}
-                className="group hover:shadow-soft transition-smooth border-2 hover:border-primary/20 animate-fade-in"
+                className="group hover:shadow-soft transition-smooth border-2 hover:border-secondary/20 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-8 space-y-4">
@@ -65,7 +65,7 @@ const CoreValues = () => {
         </div>
 
         <div className="text-center animate-fade-in" style={{ animationDelay: '500ms' }}>
-          <p className="text-2xl font-semibold text-primary">
+          <p className="text-2xl font-semibold text-secondary">
             Empowering People. Inspiring Progress. Building India Together.
           </p>
         </div>
