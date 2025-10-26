@@ -55,7 +55,7 @@ const Chatbot = () => {
     <>
       {/* Chat Window - appears to the left of avatar */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-[330px] w-[600px] h-[400px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
+        <Card className="fixed bottom-6 right-[315px] w-[600px] h-[400px] shadow-2xl border-2 border-white/20 z-50 flex flex-col overflow-hidden animate-scale-in bg-white/95 backdrop-blur-xl p-0">
           {/* Header */}
           <div className="bg-gradient-to-r from-secondary via-accent to-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
