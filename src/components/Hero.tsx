@@ -30,7 +30,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl font-semibold text-foreground/90 leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
-              Empower People. Inspire Progress. Build India Together.
+              Empower People • Inspire Progress • Build India Together
             </p>
           </div>
         </div>
