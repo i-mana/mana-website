@@ -59,12 +59,6 @@ const Chatbot = () => {
           {/* Header */}
           <div className="bg-gradient-to-r from-background/90 via-primary/30 to-background/90 backdrop-blur-sm p-4 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center gap-3">
-              {/* Mobile character avatar in header */}
-              <img 
-                src={chatbotAvatar} 
-                alt="MANA" 
-                className="w-14 h-14 md:hidden object-contain"
-              />
               <div className="text-foreground">
                 <h3 className="font-bold">MANA Chat</h3>
                 <p className="text-xs opacity-70">Always here to help</p>
@@ -82,11 +76,18 @@ const Chatbot = () => {
 
           {/* Messages */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/90 backdrop-blur-sm">
-            {messages.map((message) => (
+            {messages.map((message, index) => (
               <div
                 key={message.id}
                 className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
               >
+                {message.sender === "bot" && index === 0 && (
+                  <img 
+                    src={chatbotAvatar} 
+                    alt="MANA" 
+                    className="w-20 h-20 md:hidden object-contain mr-2 self-end"
+                  />
+                )}
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.sender === "user"
