@@ -41,21 +41,21 @@ const Products = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
               <Card
                 key={product.name}
-                className={`group p-6 gradient-card border-2 card-framed transition-all duration-500 hover:shadow-soft hover:-translate-y-2 animate-fade-in cursor-pointer`}
+                className={`group p-4 sm:p-6 gradient-card border-2 card-framed transition-all duration-500 hover:shadow-soft hover:-translate-y-2 animate-fade-in cursor-pointer`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Icon Container */}
-                <div className="mb-6 relative">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:rotate-3">
-                    <Icon className="w-8 h-8 text-primary group-hover:text-primary/80 transition-colors" />
+                <div className="mb-4 sm:mb-6 relative">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:rotate-3">
+                    <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary group-hover:text-primary/80 transition-colors" />
                     {product.name === "CinemaSurvey" && (
-                      <span className="absolute bottom-1 text-[8px] font-bold text-primary/70 tracking-wider">
+                      <span className="absolute bottom-1 text-[7px] sm:text-[8px] font-bold text-primary/70 tracking-wider">
                         SURVEY
                       </span>
                     )}
@@ -64,15 +64,15 @@ const Products = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-primary transition-colors duration-300 break-words">
                   {product.name}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-sm sm:text-base text-foreground/70 leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
                   {product.description}
                 </p>
 
                 {/* Decorative bottom line */}
-                <div className="mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary to-accent transition-all duration-700 rounded-full" />
+                <div className="mt-4 sm:mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary to-accent transition-all duration-700 rounded-full" />
               </Card>
             );
           })}
