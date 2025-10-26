@@ -14,9 +14,6 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-foreground drop-shadow-sm">
               MANA
             </h3>
-            <p className="text-foreground/70 leading-relaxed">
-              MANA
-            </p>
           </div>
 
           {/* Quick Links */}
