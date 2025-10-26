@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Clapperboard, DollarSign, TrendingUp } from "lucide-react";
+import { Clapperboard, DollarSign, Building2 } from "lucide-react";
 
 const products = [
   {
@@ -16,8 +16,8 @@ const products = [
   },
   {
     name: "Realytics",
-    description: "Advanced real-time analytics platform delivering powerful insights and data visualization for informed business decisions.",
-    icon: TrendingUp,
+    description: "Advanced real-time analytics platform delivering powerful insights and data visualization for informed real estate investment decisions.",
+    icon: Building2,
     gradient: "from-primary/20 via-secondary/10 to-background",
   },
 ];
