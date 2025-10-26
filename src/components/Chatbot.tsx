@@ -104,7 +104,16 @@ const Chatbot = () => {
                 onKeyPress={handleKeyPress}
                 className="flex-1 bg-white"
               />
-              <Button onClick={handleSend} size="icon" className="bg-primary/20 hover:bg-primary/30 backdrop-blur-sm border border-primary/30">
+              <Button 
+                onClick={handleSend} 
+                size="icon" 
+                disabled={!inputValue.trim()}
+                className={`backdrop-blur-sm border transition-all duration-300 ${
+                  inputValue.trim() 
+                    ? 'bg-primary/60 hover:bg-primary/80 border-primary/60 hover:border-primary/80' 
+                    : 'bg-primary/10 border-primary/20 opacity-40 cursor-not-allowed'
+                }`}
+              >
                 <Send className="h-4 w-4" />
               </Button>
             </div>
