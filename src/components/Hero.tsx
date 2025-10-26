@@ -8,8 +8,8 @@ const Hero = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroUnity})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 45%',
+          backgroundSize: '100% auto',
+          backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         }}
       >
