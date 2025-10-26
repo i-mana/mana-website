@@ -6,16 +6,19 @@ const products = [
     name: "CinemaSurvey",
     description: "Revolutionary cinema feedback platform transforming audience insights into actionable data for the entertainment industry.",
     icon: Clapperboard,
+    gradient: "from-primary/20 via-accent/10 to-background",
   },
   {
     name: "ChanakyAI",
     description: "Intelligent AI-powered assistant bringing ancient wisdom and modern technology together for strategic decision-making.",
     icon: DollarSign,
+    gradient: "from-accent/20 via-primary/10 to-background",
   },
   {
     name: "Realytics",
     description: "Advanced real-time analytics platform delivering powerful insights and data visualization for informed real estate investment decisions.",
     icon: Building2,
+    gradient: "from-primary/20 via-secondary/10 to-background",
   },
 ];
 
@@ -44,23 +47,32 @@ const Products = () => {
             return (
               <Card
                 key={product.name}
-                className="group p-8 hover:shadow-soft transition-smooth border-2 hover:border-primary/20 animate-fade-in"
+                className={`group p-6 bg-gradient-to-br ${product.gradient} border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-fade-in cursor-pointer`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Icon Container */}
-                <div className="mb-6">
-                  <div className="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center group-hover:scale-110 transition-smooth shadow-soft">
-                    <Icon className="w-8 h-8 text-secondary-foreground" />
+                <div className="mb-6 relative">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:rotate-3">
+                    <Icon className="w-8 h-8 text-primary group-hover:text-primary/80 transition-colors" />
+                    {product.name === "CinemaSurvey" && (
+                      <span className="absolute bottom-1 text-[8px] font-bold text-primary/70 tracking-wider">
+                        SURVEY
+                      </span>
+                    )}
                   </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-4 text-foreground">
+                <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                   {product.name}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-foreground/70 leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
                   {product.description}
                 </p>
+
+                {/* Decorative bottom line */}
+                <div className="mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary to-accent transition-all duration-700 rounded-full" />
               </Card>
             );
           })}
