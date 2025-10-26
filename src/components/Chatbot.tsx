@@ -116,7 +116,7 @@ const Chatbot = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 hover:scale-105 transition-all duration-300 z-50 overflow-hidden ${
-          isOpen ? 'w-[350px] h-[500px] rounded-3xl shadow-2xl' : 'w-20 h-20 rounded-full border-4 border-white shadow-2xl'
+          isOpen ? 'w-[300px] h-[400px]' : 'w-20 h-20 rounded-full border-4 border-white shadow-2xl'
         }`}
         style={!isOpen ? {
           background: 'linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)))',
